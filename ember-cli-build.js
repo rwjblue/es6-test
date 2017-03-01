@@ -4,7 +4,17 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'ember-cli-babel': {
+      includePolyfill: false,
+      blacklist: [
+        'es6.forOf',
+        'regenerator',
+        'es6.arrowFunctions',
+        'es6.constants',
+        'es6.blockScoping',
+        'es6.templateLiterals'
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
