@@ -6,6 +6,8 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'ember-cli-babel': {
       includePolyfill: false,
+    },
+    babel: {
       blacklist: [
         'es6.forOf',
         'regenerator',
